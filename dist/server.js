@@ -43,6 +43,7 @@ var express_1 = __importDefault(require("express"));
 var payload_1 = __importDefault(require("payload"));
 require('dotenv').config();
 var app = (0, express_1.default)();
+var port = process.env.PORT || 3002;
 // Redirect root to Admin panel
 app.get('/', function (_, res) {
     res.redirect('/admin');
@@ -68,7 +69,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                 // Initialize Payload
                 _a.sent();
                 // Add your own express routes here
-                app.listen(3002);
+                app.listen(port);
                 return [2 /*return*/];
         }
     });
